@@ -93,10 +93,12 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 DWORD WINAPI DVD_bounce(LPVOID lparam) 
 {
-	HBITMAP monDVD = (HBITMAP)LoadImage(GetModuleHandle(0), MAKEINTRESOURCE(IDB_IMAGE), IMAGE_BITMAP, 0, 0, LR_DEFAULTSIZE | LR_CREATEDIBSECTION | LR_LOADMAP3DCOLORS); // on charge notre image depuis un fichier ressource (le fameux logo DVD) 
+    HBITMAP monDVD = (HBITMAP)LoadImage(GetModuleHandle(0), MAKEINTRESOURCE(IDB_IMAGE), IMAGE_BITMAP, 0, 0, LR_DEFAULTSIZE | LR_CREATEDIBSECTION | LR_LOADMAP3DCOLORS); 
+	// on charge notre image (le fameux logo DVD) depuis un fichier ressource - J'aurais pu ajouter des logos de différentes couleurs (à chaque rebond 
+	// sur l'un des bords de la fenêtre, la couleur du logo DVD change). J'ai préféré rester sur quelque chose de simple
     HWND DVDWin = FindWindowW(L"DVD-Bouncing-Logo", L"DVD-Bouncing-Logo"); // on récupère le handle de notre fenêtre (une fois sa création et son affichage)
     
-	HDC hdc = GetDC(DVDWin); 
+    HDC hdc = GetDC(DVDWin); 
     HDC hdc_memoire = CreateCompatibleDC(hdc); // récupère le handle précédent (stock en mémoire) compatible 
     
     SelectObject(hdc_memoire, monDVD); // selection du contexte spécifié et de notre image 
@@ -133,5 +135,5 @@ DWORD WINAPI DVD_bounce(LPVOID lparam)
 			}
 			// créant ainsi un rebondissement sur les bords de la fenêtre infini
 			Sleep(10); // pour avoir un mouvement stable 
-}
+                   }
 }
