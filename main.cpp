@@ -103,16 +103,15 @@ DWORD WINAPI DVD_bounce(LPVOID lparam)
     
     SelectObject(hdc_memoire, monDVD); // selection du contexte spécifié et de notre image 
     GetWindowRect(DVDWin, &rect); // récupère les dimensions du rectangle englobant de la fenêtre spécifiée
-    
-	int srcw = rect.right; // largeur source 
-	int srch = rect.bottom; // hauteur source 
 	
-    int mouvementX = 5; int mouvementY = 5; // la vitesse à laquelle va se déplacer le logo
+    	int srcw = rect.right; // largeur source 
+    	int srch = rect.bottom; // hauteur source 
+    	int mouvementX = 5; 
+    	int mouvementY = 5; // la vitesse à laquelle va se déplacer le logo
 	
-	
-		while(true) {
+	while(true) {
 
-			  int xposition = rect.left += mouvementX; 
+	          int xposition = rect.left += mouvementX; 
 	          int yposition = rect.top += mouvementY; 
 	
 
