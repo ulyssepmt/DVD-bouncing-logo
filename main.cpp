@@ -32,8 +32,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam) // f
 		
 		PatBlt(hdc, 0, 0, w, h, PATCOPY); // application 
 
-
-		EndPaint(hWnd, &ps);
+                EndPaint(hWnd, &ps);
 		break;
 	}
 
