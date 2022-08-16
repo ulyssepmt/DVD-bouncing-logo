@@ -4,10 +4,10 @@
 #include <tchar.h>
 #include "res.h" // fichier ressource qui contient l'image bmp de logo
 
-static TCHAR szWindowClass[] = _T("DVD-Bouncing-Logo");
+static TCHAR szWindowClass[] = _T("DVD-Bouncing-Logo by Jootzu/Ulysse");
 
 // La chaîne de cractère qui apparaîtra dans le titre de l'application
-static TCHAR szTitle[] = _T("DVD-Bouncing-Logo");
+static TCHAR szTitle[] = _T("DVD-Bouncing-Logo by Jootzu/Ulysse");
 
 
 DWORD WINAPI DVD_bounce(LPVOID lparam) ;
