@@ -7,7 +7,7 @@
 static TCHAR szWindowClass[] = _T("DVD-Bouncing-Logo by Jootzu/Ulysse");
 
 // La chaîne de cractère qui apparaîtra dans le titre de l'application
-static TCHAR szTitle[] = _T("DVD-Bouncing-Logo by Jootzu/Ulysse");
+static TCHAR szTitle[] = _T("DVD-Bouncing-Logo");
 
 
 DWORD WINAPI DVD_bounce(LPVOID lparam) ;
